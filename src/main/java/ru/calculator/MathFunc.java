@@ -7,8 +7,8 @@ public class MathFunc {
         return y;
     }
 
-    public static double func2(double x) {
-        double y = 1 / x;
+    public static int func2(int x) {
+        int y = 1 / x;
         return y;
     }
 
