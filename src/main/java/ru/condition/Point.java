@@ -1,12 +1,21 @@
 package ru.condition;
 
 public class Point {
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    private int x;
+    private int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double distance(Point another) {
+        return Math.sqrt(Math.pow(another.x - x, 2) + Math.pow(another.y - y, 2));
     }
 
     public static void main(String[] args) {
-        double resultMain = Point.distance(4, 2, 109, 50);
-        System.out.println(resultMain);
+        Point point1 = new Point(2, 4);
+        Point point2 = new Point(15, 3);
+        System.out.println(point2.distance(point1));
     }
 }
